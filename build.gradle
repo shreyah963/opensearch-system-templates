@@ -31,7 +31,7 @@
 buildscript {
     ext {
         opensearch_group = "org.opensearch"
-        opensearch_version = System.getProperty("opensearch.version", "3.8.0-SNAPSHOT")
+        opensearch_version = System.getProperty("opensearch.version", "3.9.0-SNAPSHOT")
         isSnapshot = "true" == System.getProperty("build.snapshot", "true")
         buildVersionQualifier = System.getProperty("build.version_qualifier", "")
         plugin_version = opensearch_version.tokenize('-')[0] + '.0'
@@ -60,7 +60,7 @@ buildscript {
 
 plugins {
     id 'java'
-    id 'com.diffplug.spotless' version '6.25.0'
+    id 'com.diffplug.spotless' version '8.10.1'
 }
 
 apply plugin: 'opensearch.opensearchplugin'
